@@ -8,7 +8,12 @@
 <nav class="header-nav">
   <ul class="header-nav__list">
     <li class="header-nav__item">
-      <a class="header-nav__link" href="{{ route('logout') }}">logout</a>
+      <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="header-nav__link" style="background:none; border:none; padding:0; cursor:pointer;">
+          logout
+        </button>
+      </form>
     </li>
   </ul>
 </nav>

@@ -109,7 +109,8 @@
         <span class="form__label--required">※</span>
       </div>
       <div class="form__group-input">
-        <select class="form__group-select" name="category_id">
+        <select name="category_id" class="form__group-select custom-select" required>
+          <option value="" disabled {{ old('category_id') ? '' : 'selected' }}>選択してください</option>
           @foreach($categories as $category)
             <option value="{{ $category['id'] }}" {{ old('category_id') == $category['id'] ? 'selected' : '' }}>
               {{ $category['name'] }}

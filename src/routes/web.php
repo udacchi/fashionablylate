@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
@@ -19,3 +20,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::get('/admin/{id}', [AdminController::class, 'show'])->name('admin.show');
 Route::delete('/admin/{id}', [AdminController::class, 'destroy'])->name('admin.delete');
 Route::post('/contacts/revise', [ContactController::class, 'revise'])->name('contacts.revise');
+Route::post('/logout', function () {
+  Auth::logout();
+  return redirect('/login');
+})->name('logout');

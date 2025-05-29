@@ -2,6 +2,7 @@
     padding: 20px 40px;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
+    font-family: serif;
 }
 
 .header__inner {
@@ -12,7 +13,7 @@
 
 .header__logo {
     text-align: center;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     color: #7a4e2d;
     text-decoration: none;
