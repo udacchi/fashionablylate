@@ -57,6 +57,8 @@ textarea {
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
 }
 
 textarea {
