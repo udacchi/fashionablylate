@@ -60,8 +60,6 @@ class ContactRequest extends FormRequest
             $phone1 = $this->input('phone1');
             $phone2 = $this->input('phone2');
             $phone3 = $this->input('phone3');
-
-            
             if (empty($phone1) || empty($phone2) || empty($phone3)) {
                 $validator->errors()->add('phone_group', '電話番号をすべて入力してください');
             }
